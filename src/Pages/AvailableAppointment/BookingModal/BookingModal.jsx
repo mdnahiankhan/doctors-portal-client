@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 import { AuthContext } from '../../../contexts/Authprovider';
 
 const BookingModal = ({ treatment, selectedDate, setTreatment, refetch }) => {
-    const { name: treatMentName, slots } = treatment; //  treatment is appointmentoption just different name 
+    const { name: treatMentName, slots, price } = treatment; //  treatment is appointmentoption just different name 
     const date = format(selectedDate, 'PP');
     const { user } = useContext(AuthContext)
 
@@ -22,7 +22,8 @@ const BookingModal = ({ treatment, selectedDate, setTreatment, refetch }) => {
             patient: name,
             slot,
             email,
-            phone
+            phone,
+            price
 
         }
 
