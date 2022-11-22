@@ -4,7 +4,7 @@ const useAdmin = email => {
     const [isAdmin, setisAdmin] = useState(false);
     const [isAdminLoading, setisAdminLoading] = useState(true)
     useEffect(() => {
-        fetch(`http://localhost:5000/users/admin/${email}`)
+        fetch(`https://doctors-portal-server-five-omega.vercel.app/users/admin/${email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
