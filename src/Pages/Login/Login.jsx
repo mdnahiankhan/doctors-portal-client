@@ -25,7 +25,6 @@ const Login = () => {
                 const user = result.user
                 console.log(user);
                 setLoginUserEmail(data.email)
-
             })
             .catch(error => {
                 console.log(error.message);
